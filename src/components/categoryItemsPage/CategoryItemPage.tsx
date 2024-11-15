@@ -36,7 +36,7 @@ const CategoryItemPage = () => {
         } else {
           throw new Error("Invalid response format");
         }
-      } catch (err) {
+      } catch (err: any) {
         console.error("Error fetching items:", err);
         setError(err.message);
       } finally {
@@ -59,7 +59,7 @@ const CategoryItemPage = () => {
       </h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {items.map((item) => (
+        {items.map((item: any) => (
           <div
             key={item.id}
             className="item-card bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition"

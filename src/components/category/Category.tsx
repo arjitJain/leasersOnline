@@ -28,7 +28,7 @@ const Category = () => {
                 console.error('Expected an array but received:', data);
                 setCategories([]);  // Set to empty array if data is not as expected
             }
-        } catch (err) {
+        } catch (err: any) {
             console.error('Error fetching categories:', err);
             setError(err.message);
         } finally {
@@ -40,7 +40,7 @@ const Category = () => {
 }, []);
 
 
-  const handleCategoryClick = (categoryId) => {
+  const handleCategoryClick = (categoryId: any) => {
     navigate(`/category/${categoryId}`);
   };
 
@@ -57,7 +57,7 @@ const Category = () => {
         <h1 className="text-left text-4xl text-gray-900 dark:text-gray-100 font-bold mb-8">Categories</h1>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {categoriesList.map((category, index) => (
+          {categoriesList.map((category: any, index) => (
             <div
               key={index}
               className="flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg cursor-pointer border border-gray-300 dark:border-gray-700 shadow-md hover:bg-gradient-to-br from-yellow-100 to-pink-100 dark:from-yellow-900 dark:to-pink-900 transition duration-300 transform hover:scale-105"

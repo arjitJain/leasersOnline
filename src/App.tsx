@@ -1,12 +1,10 @@
-import { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
-import Home from "./Pages/Home";
-import CategoryItemPage from "./Components/CategoryItemsPage/CategoryItemPage";
+import Home from "./pages/Home";
+import CategoryItemPage from "./components/CategoryItemsPage/CategoryItemPage";
 import "./App.css";
 import "./index.css";
 
